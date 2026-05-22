@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Pomodoro Timer</title>
+</head>
+
+<body>
+
+    <h1>Pomodoro Timer</h1>
+    <p class="subtitle">Stay focused. Take breaks. Get things done.</p>
+
+    <div class="mode-label" id="mode-label">Focus</div>
+
+    <div class="timer-wrapper">
+        <svg width="240" height="240" viewBox="0 0 240 240">
+            <circle class="timer-bg" cx="120" cy="120" r="108" />
+            <circle class="timer-progress" id="progress-circle" cx="120" cy="120" r="108" />
+        </svg>
+        <div class="timer-display" id="timer-display">25:00</div>
+    </div>
+
+    <div class="controls">
+        <button id="btn-start">Start</button>
+        <button id="btn-pause" disabled>Pause</button>
+        <button id="btn-reset">Reset</button>
+    </div>
+
+    <div class="settings">
+        <h2>Settings</h2>
+        <div class="setting-row">
+            <label for="focus-input">Focus time (min)</label>
+            <input type="number" id="focus-input" value="25" min="1" max="99" />
+        </div>
+        <div class="setting-row">
+            <label for="break-input">Break time (min)</label>
+            <input type="number" id="break-input" value="5" min="1" max="99" />
+        </div>
+    </div>
+
+    <div class="history">
+        <h2>Today's Focus Sessions</h2>
+        <ul class="history-list" id="history-list"></ul>
+        <p class="empty-note" id="empty-note">No sessions completed yet.</p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
